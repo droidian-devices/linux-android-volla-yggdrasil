@@ -58,7 +58,7 @@ static const struct tty_operations usb_console_fake_tty_ops = {
 static int usb_console_setup(struct console *co, char *options)
 {
 	struct usbcons_info *info = &usbcons_info;
-	int baud = 9600;
+	int baud = 115200;
 	int bits = 8;
 	int parity = 'n';
 	int doflow = 0;
@@ -85,7 +85,7 @@ static int usb_console_setup(struct console *co, char *options)
 	
 	/* Sane default */
 	if (baud == 0)
-		baud = 9600;
+		baud = 115200;
 
 	switch (bits) {
 	case 7:
@@ -269,8 +269,7 @@ static struct console usbcons = {
 
 void usb_serial_console_disconnect(struct usb_serial *serial)
 {
-	if (serial && serial->port && serial->port[0]
-				&& serial->port[0] == usbcons_info.port) {
+	if (serial->port[0] && serial->port[0] == usbcons_info.port) {
 		usb_serial_console_exit();
 		usb_serial_put(serial);
 	}

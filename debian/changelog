@@ -1,0 +1,53 @@
+linux-android-volla-yggdrasil (0.0.0+git20210221172417.ade5d98.bullseye) bullseye; urgency=medium
+
+  [ TheKit ]
+  * arm64: k63v2_64_bsp_defconfig: Enable CONFIG_SQUASHFS_LZ4
+  * android: lowmemorykiller: fix default values array length
+  * (halium) android: lowmemorykiller: ignore swap in min_score_adj calculations
+  * (halium) binder: do not use a separate queue for async oneway transactions
+
+  [ Jami Kettunen ]
+  * arm64: k63v2_64_bsp_defconfig: Enable RFKILL
+  * k63v2_64_bsp_defconfig: Disable MediaTek memory logger
+  * k63v2_64_bsp_defconfig: Disable pointless MediaTek profilers
+  * k63v2_64_bsp_defconfig: Disable MediaTek CPU loading tracking service
+  * k63v2_64_bsp_defconfig: Disable PRINTK_MT_PREFIX
+  * k63v2_64_bsp_defconfig: Disable DYNAMIC_DEBUG
+  * tree-wide: Silence spammy debug loggers
+  * misc: mediatek: wlan: Tame the beast (silence debug log spam)
+  * usb: gadget: configfs: Make usb_state kmsg spam conditional & disable it
+  * power: mediatek: cw2015_fuel_gauge: Silence a bunch of kmsg spam
+  * power: mediatek: cw2015_fuel_gauge: Stop reporting sysfs properties
+
+  [ NotKit ]
+  * Merge pull request #5 from fredldotme/fix_rt
+
+  [ Alfred Neumayer ]
+  * security: Integrate 4.4-xenial based AppArmor into 4.4
+  * apparmor: Forward-port query_label function from AppArmor 3.0rc
+  * rt.c: Fix build with RT_GROUP_SCHED
+  * misc: Remove RT_GROUP_SCHED from default selection
+  * rt.c: Avoid using rt_rq_throttled() to determine rescheduling
+
+  [ Ratchanan Srirattanamet ]
+  * (halium) k63v2_64_bsp_defconfig: enable missing BT proto support
+
+  [ Venji10 ]
+  * scripts/dtc: Remove redundant YYLOC declarations
+
+  [ Erfan Abdi ]
+  * security: Replace AppArmor with version from xenial Ubuntu-4.4.0-178.208
+
+  [ NeKit ]
+  * Initial kernel import from BSP package
+  * Fix compilation in LineageOS 16.0 tree
+  * Import MediaTek connectivity kernel modules back into kernel tree
+  * (hybris) Apply Mer defconfig changes
+  * (halium) Disable CONFIG_CGROUP_SCHEDTUNE for UBPorts LXC
+  * (hybris) always boot to initramfs
+  * (halium) binder: ignore txn_security_ctx flag
+  * (halium) k63v2_64_bsp_defconfig: enable AppArmor
+  * (halium) k63v2_64_bsp_defconfig: add binder devices for Anbox
+
+ -- TheKit <nekit1000@gmail.com>  Sun, 21 Feb 2021 19:24:17 +0200
+

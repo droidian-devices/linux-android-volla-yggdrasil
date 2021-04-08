@@ -1,0 +1,11 @@
+Package: linux-headers-volla-yggdrasil
+Source: linux-android-volla-yggdrasil
+Version: 0.0.0+git20210221172417.ade5d98.bullseye
+Architecture: arm64
+Maintainer: hybris-mobian porters <info@hybris-mobian.org>
+Installed-Size: 8
+Depends: linux-headers-4.4-0-volla-yggdrasil (= 0.0.0+git20210221172417.ade5d98.bullseye)
+Section: kernel
+Priority: optional
+Description: Linux kernel for Volla Phone - Headers (latest)
+ This package depends to the latest kernel headers available for the Volla Phone.

@@ -1,0 +1,5 @@
+# Automatically added by dh_installmodules/13.3.4
+if [ -e /boot/System.map-4.4-0-volla-yggdrasil ]; then
+	depmod -a -F /boot/System.map-4.4-0-volla-yggdrasil 4.4-0-volla-yggdrasil || true
+fi
+# End automatically added section

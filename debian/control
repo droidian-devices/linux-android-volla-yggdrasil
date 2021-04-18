@@ -1,10 +1,11 @@
 Source: linux-android-volla-yggdrasil
 Section: kernel
 Priority: optional
-Maintainer: hybris-mobian porters <info@hybris-mobian.org>
-Uploaders: Eugenio Paolantonio (g7) <me@medesimo.eu>,
-           r3vn <giuseppe.corti@pm.me>,
-           Erfan Abdi <erfangplus@gmail.com>,
+Maintainer: Droidian porters <info@droidian.org>
+Uploaders: Eugenio Paolantonio (g7) <eugenio@droidian.org>,
+           r3vn <giuseppe@droidian.org>,
+           Erfan Abdi <erfan@droidian.org>,
+           Erik Inkinen <erik@droidian.org>,
 Build-Depends: build-essential,
                dpkg-dev,
                findutils,
@@ -39,7 +40,7 @@ Description: Linux kernel for Volla Phone
 
 Package: linux-bootimage-4.4-0-volla-yggdrasil
 Architecture: arm64
-Pre-Depends: flash-bootimage
+Pre-Depends: flash-bootimage (>= 4)
 Depends: ${misc:Depends},
          linux-image-4.4-0-volla-yggdrasil (= ${binary:Version})
 Description: Linux kernel for Volla Phone - Android Boot Image

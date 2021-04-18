@@ -77,7 +77,9 @@ FLASH_ENABLED = 1
 # on older devices.
 #
 # Do not enable if you don't know what you're doing
-FLASH_IS_LEGACY_DEVICE = 1
+FLASH_IS_LEGACY_DEVICE = 0
+
+FLASH_IS_AONLY = 1
 
 # Device manufacturer. This must match the `ro.product.vendor.manufacturer`
 # Android property. If you don't want to specify this, leave it undefined,

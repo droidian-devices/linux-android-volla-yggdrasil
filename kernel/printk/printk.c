@@ -1743,9 +1743,6 @@ static void call_console_drivers(int level,
 		return;
 
 	for_each_console(con) {
-		/* if uart printk disabled */
-		if ((printk_disable_uart == 1) && (con->flags & CON_CONSDEV))
-			continue;
 		if (exclusive_console && con != exclusive_console)
 			continue;
 		if (!(con->flags & CON_ENABLED))

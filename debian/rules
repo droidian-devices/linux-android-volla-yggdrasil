@@ -5,4 +5,10 @@ include /usr/share/linux-packaging-snippets/kernel-snippet.mk
 %:
 	dh $@
 
+out/KERNEL_OBJ/initramfs.gz:
+	cp /usr/lib/arm-linux-gnueabihf/halium-generic-initramfs/initrd.img-halium-generic $@
+
+out/KERNEL_OBJ/recovery-initramfs.gz:
+	cp /usr/lib/arm-linux-gnueabihf/halium-generic-initramfs/recovery-initramfs.img-halium-generic $@
+
 override_dh_dwz:

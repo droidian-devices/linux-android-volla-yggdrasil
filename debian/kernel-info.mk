@@ -11,7 +11,7 @@ VARIANT = android
 KERNEL_BASE_VERSION = 4.4-0
 
 # The kernel cmdline to use
-KERNEL_BOOTIMAGE_CMDLINE = bootopt=64S3,32N2,64N2 datapart=/dev/disk/by-partlabel/userdata androidboot.selinux=permissive androidboot.hardware=yggdrasil buildvariant=eng
+KERNEL_BOOTIMAGE_CMDLINE = bootopt=64S3,32N2,64N2 datapart=/dev/disk/by-partlabel/userdata androidboot.selinux=permissive androidboot.hardware=yggdrasil buildvariant=eng droidian.lvm.prefer
 
 # Slug for the device vendor. This is going to be used in the KERNELRELASE
 # and package names.
@@ -122,7 +122,7 @@ BUILD_PATH = /usr/lib/llvm-android-6.0-4691093/bin
 # Extra packages to add to the Build-Depends section. Mainline builds
 # can have this section empty, unless cross-building.
 # The default is enough to install the Android toolchain, including clang.
-DEB_TOOLCHAIN = linux-initramfs-halium-generic:arm64, binutils-aarch64-linux-gnu, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross
+DEB_TOOLCHAIN = linux-initramfs-halium-generic:armhf, binutils-aarch64-linux-gnu, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross
 
 # Where we're building on
 DEB_BUILD_ON = amd64

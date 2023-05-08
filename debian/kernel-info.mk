@@ -80,6 +80,7 @@ FLASH_ENABLED = 1
 FLASH_IS_LEGACY_DEVICE = 0
 
 FLASH_IS_AONLY = 1
+DEVICE_IS_AB = no
 
 # Device manufacturer. This must match the `ro.product.vendor.manufacturer`
 # Android property. If you don't want to specify this, leave it undefined,
@@ -96,6 +97,9 @@ FLASH_INFO_MODEL = Volla Phone
 # method, specifying FLASH_INFO_MANUFACTURER and FLASH_INFO_MODEL is
 # recommended.
 FLASH_INFO_CPU = MT6763V/V
+
+# Space-separated list of supported device ids as reported by fastboot
+FLASH_INFO_DEVICE_IDS = k63v2_64_bsp
 
 ########################################################################
 # Kernel build settings
